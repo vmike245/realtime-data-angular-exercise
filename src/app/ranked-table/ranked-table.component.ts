@@ -22,6 +22,7 @@ export class RankedTableComponent {
   }
   @Input() public tableTitle: string = '';
   @Input() public countColumnLabel: string = 'Count';
+
   public displayedColumns = ['rank', 'name', 'count'];
   public filterText = new FormControl('');
   private allItems = new BehaviorSubject<RankedItem[]>([]);

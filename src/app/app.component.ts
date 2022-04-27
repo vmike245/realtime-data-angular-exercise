@@ -52,6 +52,7 @@ export class AppComponent {
 
   public contributorList$ = this.convertObjectToRankedList(this.contributors);
   public editedItemsList$ = this.convertObjectToRankedList(this.editedItems);
+
   constructor(private PubNub: PubNubAngular) {
     // Tracking wikipedia edits
     PubNub.init({
@@ -59,6 +60,7 @@ export class AppComponent {
       uuid: '8241356d-55c2-4c1a-8b62-2435fcdce677',
     });
   }
+
   ngOnInit() {
     this.PubNub.addListener({
       message: ({ message: { user, item } }: { message: WikiEdit }) => {
