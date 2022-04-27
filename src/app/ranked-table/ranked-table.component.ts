@@ -24,9 +24,12 @@ export class RankedTableComponent {
   private allItems = new BehaviorSubject<RankedItem[]>([]);
   public filteredItems$ = combineLatest({
     items: this.allItems,
-    filterText: of(this.filterText),
+    filterText: of(this.filterText).pipe(startWith(new FormControl(''))),
   }).pipe(
     map(({ items, filterText: { value } }) => {
+      if (!value) {
+        return items;
+      }
       return items.filter(({ name }) =>
         name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
       );
