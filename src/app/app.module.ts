@@ -4,7 +4,6 @@ import { PubNubAngular } from 'pubnub-angular2';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RankedTableComponent } from './ranked-table/ranked-table.component';
 import { RankedTableModule } from './ranked-table/ranked-table.module';
 
 @NgModule({

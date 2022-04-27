@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { BehaviorSubject, combineLatest, map, of, startWith } from 'rxjs';
 
@@ -12,6 +12,9 @@ interface RankedItem {
   selector: 'app-ranked-table',
   templateUrl: './ranked-table.component.html',
   styleUrls: ['./ranked-table.component.scss'],
+  host: {
+    class: 'flex-column',
+  },
 })
 export class RankedTableComponent {
   @Input() public set items(items: RankedItem[]) {

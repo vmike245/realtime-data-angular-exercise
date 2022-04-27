@@ -2,11 +2,11 @@
   <h1 class="text-align-center">Wikipedia Rankings</h1>
   <div
     class="flex-row justify-content-space-between width-100"
-    [style]="{ maxHeight: '750px' }"
+    [style]="{ height: '750px' }"
   >
     <app-ranked-table
       *ngIf="contributorList$ | async as contributorList"
-      class="overflow-auto margin-right-4"
+      class="margin-right-4"
       tableTitle="Top Contributors"
       countColumnLabel="Contribution Count"
       [items]="contributorList"
@@ -14,7 +14,6 @@
     ></app-ranked-table>
     <app-ranked-table
       *ngIf="editedItemsList$ | async as editedItemsList"
-      class="overflow-auto"
       tableTitle="Most Edited Pages"
       countColumnLabel="Edit Count"
       [items]="editedItemsList"
