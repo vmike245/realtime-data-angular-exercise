@@ -9,7 +9,7 @@
       class="overflow-auto margin-right-4"
       tableTitle="Top Contributors"
       countColumnLabel="Contribution Count"
-      [contributors]="contributorList"
+      [items]="contributorList"
       [style]="{ width: '45%' }"
     ></app-ranked-table>
     <app-ranked-table
@@ -17,7 +17,7 @@
       class="overflow-auto"
       tableTitle="Most Edited Pages"
       countColumnLabel="Edit Count"
-      [contributors]="editedItemsList"
+      [items]="editedItemsList"
       [style]="{ width: '45%' }"
     ></app-ranked-table>
   </div>

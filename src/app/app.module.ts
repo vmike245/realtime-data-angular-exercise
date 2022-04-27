@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PubNubAngular } from 'pubnub-angular2';
-import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RankedTableComponent } from './ranked-table/ranked-table.component';
+import { RankedTableModule } from './ranked-table/ranked-table.module';
 
 @NgModule({
-  declarations: [AppComponent, RankedTableComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MatTableModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, RankedTableModule],
   providers: [PubNubAngular],
   bootstrap: [AppComponent],
 })
